@@ -1,0 +1,68 @@
+from rich.console import Console
+from rich.html import render
+
+# Полный HTML-код вашей визитки
+html_code = """
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Визитка Златы</title>
+</head>
+<body>
+
+<header class="hero">
+    <nav>
+        <h1>Визитка Златы</h1>
+        <ul>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#gallery">Галерея</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-content">
+        <img src="photo1.jpg" alt="Злата">
+        <div>
+            <h2>Добро пожаловать!</h2>
+            <p>Это мой персональный сайт-визитка. Здесь вы можете узнать обо мне, посмотреть фотографии и связаться со мной.</p>
+            <a class="btn" href="#gallery">Смотреть фото</a>
+        </div>
+    </div>
+</header>
+
+<section id="about" class="section">
+    <h2>Обо мне</h2>
+    <p>
+        Привет! Меня зовут Злата. Я люблю творчество, красивые фотографии, современный стиль и создание интересных проектов.
+    </p>
+</section>
+
+<section id="gallery" class="section">
+    <h2>Галерея</h2>
+
+    <div class="gallery">
+        <img src="photo1.jpg" alt="Фото 1">
+        <img src="photo2.jpg" alt="Фото 2">
+        <img src="photo3.jpg" alt="Фото 3">
+    </div>
+</section>
+
+<section id="contacts" class="section">
+    <h2>Контакты</h2>
+    <p>Telegram: @zlata</p>
+    <p>VK: vk.com/zlata</p>
+</section>
+
+<footer>
+    <p>© 2026 Визитка Златы</p>
+</footer>
+
+</body>
+</html>
+"""
+
+# Инициализируем консоль и выводим отрендеренный HTML
+console = Console()
+console.print(render(html_code))
